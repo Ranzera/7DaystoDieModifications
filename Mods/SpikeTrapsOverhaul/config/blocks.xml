@@ -1,0 +1,19 @@
+<configs>
+	<set xpath="/blocks/block[@name='trapSpikesWoodMaster']/property[@name='Damage']/@value">10</set>
+	<set xpath="/blocks/block[@name='trapSpikesWoodMaster']/property[@name='Damage_received']/@value">33</set> <!-- This is the default -->
+	<set xpath="/blocks/block[@name='trapSpikesWoodMaster']/property[@name='MaxDamage']/@value">33</set> <!-- This is the default -->
+	<set xpath="/blocks/block[@name='trapSpikesWoodDmg2']/property[@class='UpgradeBlock']/property[@name='UpgradeHitCount']/@value">20</set>
+	<set xpath="/blocks/block[@name='trapSpikesWoodDmg2']/property[@class='UpgradeBlock']/property[@name='ItemCount']/@value">10</set> <!-- This is the default -->
+	<set xpath="/blocks/block[@name='trapSpikesWoodDmg1']/property[@class='UpgradeBlock']/property[@name='UpgradeHitCount']/@value">10</set>
+	<set xpath="/blocks/block[@name='trapSpikesWoodDmg1']/property[@class='UpgradeBlock']/property[@name='ItemCount']/@value">5</set> <!-- This is the default -->
+	<set xpath="/blocks/block[@name='trapSpikesWoodDmg0']/property[@class='UpgradeBlock']/property[@name='UpgradeHitCount']/@value">20</set>
+	<set xpath="/blocks/block[@name='trapSpikesWoodDmg0']/property[@class='UpgradeBlock']/property[@name='ItemCount']/@value">4</set> <!-- This is the default -->
+	
+	<set xpath="/blocks/block[@name='trapSpikesScrapIronMaster']/property[@name='Damage']/@value">20</set>
+	<set xpath="/blocks/block[@name='trapSpikesScrapIronMaster']/property[@name='Damage_received']/@value">33</set> <!-- This is the default -->
+	<set xpath="/blocks/block[@name='trapSpikesScrapIronMaster']/property[@name='MaxDamage']/@value">132</set> <!-- This is the default -->
+	<set xpath="/blocks/block[@name='trapSpikesIronDmg2']/property[@class='UpgradeBlock']/property[@name='UpgradeHitCount']/@value">20</set>
+	<set xpath="/blocks/block[@name='trapSpikesIronDmg2']/property[@class='UpgradeBlock']/property[@name='ItemCount']/@value">1</set> <!-- This is the default -->
+	<set xpath="/blocks/block[@name='trapSpikesIronDmg1']/property[@class='UpgradeBlock']/property[@name='UpgradeHitCount']/@value">10</set>
+	<set xpath="/blocks/block[@name='trapSpikesIronDmg1']/property[@class='UpgradeBlock']/property[@name='ItemCount']/@value">1</set> <!-- This is the default -->
+</configs>

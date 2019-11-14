@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+	<ModInfo>
+		<Name value="Make Iron Great Again" />
+		<Description value="Adds back iron ore that the dumb pimps have removed." />
+		<Author value="Ranzera" />
+		<Version value="1.0" />
+
+	</ModInfo>
+</xml>

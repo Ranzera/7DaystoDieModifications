@@ -1,0 +1,26 @@
+<configs>
+	<set xpath="/spawning/biome[@name='pine_forest']/spawn[@entitygroup='ZombiesAll']/@maxcount">2</set>
+	<set xpath="/spawning/biome[@name='pine_forest']/spawn[@entitygroup='ZombiesAll']/@respawndelay">1</set>
+	<set xpath="/spawning/biome[@name='pine_forest']/spawn[@entitygroup='ZombiesNight']/@maxcount">2</set>
+	<set xpath="/spawning/biome[@name='pine_forest']/spawn[@entitygroup='ZombiesNight']/@respawndelay">1</set>
+	
+	<set xpath="/spawning/biome[@name='desert']/spawn[@entitygroup='ZombiesAll']/@maxcount">2</set>
+	<set xpath="/spawning/biome[@name='desert']/spawn[@entitygroup='ZombiesAll']/@respawndelay">1</set>
+	<set xpath="/spawning/biome[@name='desert']/spawn[@entitygroup='ZombiesNight']/@maxcount">2</set>
+	<set xpath="/spawning/biome[@name='desert']/spawn[@entitygroup='ZombiesNight']/@respawndelay">1</set>
+	
+	<set xpath="/spawning/biome[@name='wasteland']/spawn[@entitygroup='ZombiesAll']/@maxcount">3</set>
+	<set xpath="/spawning/biome[@name='wasteland']/spawn[@entitygroup='ZombiesAll']/@respawndelay">1</set>
+	<set xpath="/spawning/biome[@name='wasteland']/spawn[@entitygroup='ZombiesWastelandNight']/@maxcount">3</set>
+	<set xpath="/spawning/biome[@name='wasteland']/spawn[@entitygroup='ZombiesWastelandNight']/@respawndelay">1</set>
+	
+	<set xpath="/spawning/biome[@name='burnt_forest']/spawn[@entitygroup='ZombiesBurntForest']/@maxcount">2</set>
+	<set xpath="/spawning/biome[@name='burnt_forest']/spawn[@entitygroup='ZombiesBurntForest']/@respawndelay">1</set>
+	<set xpath="/spawning/biome[@name='burnt_forest']/spawn[@entitygroup='ZombiesNight']/@maxcount">2</set>
+	<set xpath="/spawning/biome[@name='burnt_forest']/spawn[@entitygroup='ZombiesNight']/@respawndelay">1</set>
+	
+	<set xpath="/spawning/biome[@name='snow']/spawn[@entitygroup='SnowZombies']/@maxcount">2</set>
+	<set xpath="/spawning/biome[@name='snow']/spawn[@entitygroup='SnowZombies']/@respawndelay">1</set>
+	<set xpath="/spawning/biome[@name='snow']/spawn[@entitygroup='ZombiesNight']/@maxcount">2</set>
+	<set xpath="/spawning/biome[@name='snow']/spawn[@entitygroup='ZombiesNight']/@respawndelay">1</set>
+</configs>

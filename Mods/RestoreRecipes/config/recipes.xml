@@ -1,0 +1,46 @@
+<config>
+<insertAfter xpath="/recipes/recipe[@name='ammoGasCan']" >
+	<recipe name="ammoGasCan" count="10" craft_area="campfire" craft_tool="toolBeaker" tags="learnable">
+		<ingredient name="resourceAnimalFat" count="2"/>
+		<ingredient name="drinkJarGrainAlcohol" count="1"/>
+	</recipe>
+
+	<recipe name="ammoGasCan" count="10" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+		<ingredient name="resourceAnimalFat" count="1"/>
+		<ingredient name="foodCornMeal" count="1"/>
+		<ingredient name="drinkJarRiverWater" count="1"/>
+	</recipe>
+</insertAfter>
+
+<insertAfter xpath="/recipes/recipe[@name='barbedFence']" >
+	<recipe name="barbedWireSheet" count="1"> <!-- trap -->
+		<ingredient name="resourceScrapIron" count="15"/>
+	</recipe>
+</insertAfter>
+
+<insertAfter xpath="/recipes/recipe[@name='resourceInsulator']" >
+	<recipe name="resourceMechanicalParts" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceForgedSteel" count="2"/>
+		<ingredient name="resourceDuctTape" count="1"/>
+	</recipe>
+</insertAfter>
+
+<insertAfter xpath="/recipes/recipe[@name='resourceRocketTip']" >
+	<recipe name="resourceSpring" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceForgedSteel" count="4"/>
+		<ingredient name="resourceCoal" count="4"/>
+	</recipe>
+</insertAfter>
+
+<insertAfter xpath="/recipes/recipe[@name='scrapIronSheet']" >
+	<recipe name="scrapIronLogSpike4" count="1"> <!-- trap -->
+		<ingredient name="resourceScrapIron" count="40"/>
+	</recipe>
+</insertAfter>
+
+<insertAfter xpath="/recipes/recipe[@name='woodLogPillar100']" >
+	<recipe name="woodLogSpike1" count="1"> <!-- trap -->
+		<ingredient name="resourceWood" count="15"/>
+	</recipe>
+</insertAfter>
+</config>

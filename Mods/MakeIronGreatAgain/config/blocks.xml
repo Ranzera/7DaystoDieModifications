@@ -1,0 +1,24 @@
+<config>
+	<append xpath="/blocks/block[@name='terrStone']">
+		<drop event="Harvest" name="resourceIronFragment" count="2" tag="oreWoodHarvest"/>
+		<drop event="Fall" name="resourceIronFragment" count="4" prob="0.23" stick_chance="0"/>
+	</append>
+	
+	<remove xpath="/blocks/block[@name='terrOreIron']/drop[contains(@name, 'resourceScrapIron')]" />
+	
+	<append xpath="/blocks/block[@name='terrOreIron']">
+		<drop event="Harvest" name="resourceIronFragment" count="21" tag="oreWoodHarvest"/>
+		<drop event="Fall" name="resourceIronFragment" count="30" prob="0.4" stick_chance="0"/>
+	</append>
+	
+	<remove xpath="/blocks/block[@name='oreIronBoulder']/drop[@name='resourceScrapIron']" />
+	
+	<append xpath="/blocks/block[@name='oreIronBoulder']">
+		<drop event="Harvest" name="resourceIronFragment" count="21" tag="oreWoodHarvest"/>
+		<drop event="Harvest" name="resourceRockSmall" count="14" tag="oreWoodHarvest"/>
+	</append>
+	
+	<append xpath="/blocks/block[@name='rockResource']">
+		<drop event="Harvest" name="resourceIronFragment" count="3" tag="oreWoodHarvest"/>
+	</append>
+</config>

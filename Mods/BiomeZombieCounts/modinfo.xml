@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+	<ModInfo>
+		<Name value="Biome Zombie Counts" />
+		<Description value="Set the number of max alive zombies in each biome." />
+		<Author value="Ranzera" />
+		<Version value="1.0" />
+
+	</ModInfo>
+</xml>

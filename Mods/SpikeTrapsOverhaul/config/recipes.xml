@@ -1,0 +1,6 @@
+<configs>
+	<setattribute xpath="/recipes/recipe[@name='trapSpikesWoodDmg0']" name="craft_time">300</setattribute>
+	<set xpath="/recipes/recipe[@name='trapSpikesWoodDmg0']/ingredient[@name='resourceWood']/@count">20</set> <!-- This is the default -->
+	<setattribute xpath="/recipes/recipe[@name='trapSpikesIronDmg0']" name="craft_time">300</setattribute>
+	<set xpath="/recipes/recipe[@name='trapSpikesIronDmg0']/ingredient[@name='resourceForgedIron']/@count">4</set> <!-- This is the default -->
+</configs>
