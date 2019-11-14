@@ -1,0 +1,3 @@
+<config>
+	<set xpath="/buffs/buff[@name='buffDrugFortBites']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">25</set>
+</config>

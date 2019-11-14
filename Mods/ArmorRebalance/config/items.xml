@@ -1,0 +1,123 @@
+<config>
+	<set xpath="/items/item[@name='armorClothHat']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">1.5,4</set>
+	<setattribute xpath="/items/item[@name='armorClothHat']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorSantaHat']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">2.5,5</set>
+	<setattribute xpath="/items/item[@name='armorSantaHat']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorClothJacket']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">1.5,4</set>
+	<setattribute xpath="/items/item[@name='armorClothJacket']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorClothGloves']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">1.5,4</set>
+	<setattribute xpath="/items/item[@name='armorClothGloves']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorClothPants']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">1.5,4</set>
+	<setattribute xpath="/items/item[@name='armorClothPants']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorClothBoots']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">1.5,4</set>
+	<setattribute xpath="/items/item[@name='armorClothBoots']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorLeatherHood']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">2.5,5</set>
+	<setattribute xpath="/items/item[@name='armorLeatherHood']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorLeatherChest']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">2.5,5</set>
+	<setattribute xpath="/items/item[@name='armorLeatherChest']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorLeatherGloves']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">2.5,5</set>
+	<setattribute xpath="/items/item[@name='armorLeatherGloves']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorLeatherPants']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">2.5,5</set>
+	<setattribute xpath="/items/item[@name='armorLeatherPants']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorLeatherBoots']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">2.5,5</set>
+	<setattribute xpath="/items/item[@name='armorLeatherBoots']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorMilitaryHelmet']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">4.5,7</set>
+	<setattribute xpath="/items/item[@name='armorMilitaryHelmet']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorMilitaryVest']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">4.5,7</set>
+	<setattribute xpath="/items/item[@name='armorMilitaryVest']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorMilitaryGloves']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">4.5,7</set>
+	<setattribute xpath="/items/item[@name='armorMilitaryGloves']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorMilitaryLegs']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">4.5,7</set>
+	<setattribute xpath="/items/item[@name='armorMilitaryLegs']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorMilitaryBoots']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">4.5,7</set>
+	<setattribute xpath="/items/item[@name='armorMilitaryBoots']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorMilitaryStealthBoots']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">4.5,7</set>
+	<setattribute xpath="/items/item[@name='armorMilitaryStealthBoots']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorScrapHelmet']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">3,5.5</set>
+	<setattribute xpath="/items/item[@name='armorScrapHelmet']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorScrapChest']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">3,5.5</set>
+	<setattribute xpath="/items/item[@name='armorScrapChest']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorScrapGloves']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">3,5.5</set>
+	<setattribute xpath="/items/item[@name='armorScrapGloves']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorScrapLegs']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">3,5.5</set>
+	<setattribute xpath="/items/item[@name='armorScrapLegs']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorScrapBoots']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">3,5.5</set>
+	<setattribute xpath="/items/item[@name='armorScrapBoots']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorIronHelmet']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">5,7.5</set>
+	<setattribute xpath="/items/item[@name='armorIronHelmet']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorIronChest']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">5,7.5</set>
+	<setattribute xpath="/items/item[@name='armorIronChest']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorIronGloves']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">5,7.5</set>
+	<setattribute xpath="/items/item[@name='armorIronGloves']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorIronLegs']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">5,7.5</set>
+	<setattribute xpath="/items/item[@name='armorIronLegs']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorIronBoots']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">5,7.5</set>
+	<setattribute xpath="/items/item[@name='armorIronBoots']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorSteelHelmet']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">7.5,9</set>
+	<setattribute xpath="/items/item[@name='armorSteelHelmet']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorSteelChest']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">7.5,9</set>
+	<setattribute xpath="/items/item[@name='armorSteelChest']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorSteelGloves']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">7.5,9</set>
+	<setattribute xpath="/items/item[@name='armorSteelGloves']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorSteelLegs']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">7.5,9</set>
+	<setattribute xpath="/items/item[@name='armorSteelLegs']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorSteelBoots']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">7.5,9</set>
+	<setattribute xpath="/items/item[@name='armorSteelBoots']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorMiningHelmet']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">3.5,6</set>
+	<setattribute xpath="/items/item[@name='armorMiningHelmet']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorFirefightersHelmet']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">6.5,8</set>
+	<setattribute xpath="/items/item[@name='armorFirefightersHelmet']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorSwatHelmet']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">7.5,9</set>
+	<setattribute xpath="/items/item[@name='armorSwatHelmet']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorFootballHelmet']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">3.5,6</set>
+	<setattribute xpath="/items/item[@name='armorFootballHelmet']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='armorFootballHelmetZU']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">4,6.5</set>
+	<setattribute xpath="/items/item[@name='armorFootballHelmetZU']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='apparelCowboyHat']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">2.5,5</set>
+	<setattribute xpath="/items/item[@name='apparelCowboyHat']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='apparelCowboyBoots']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">2.5,5</set>
+	<setattribute xpath="/items/item[@name='apparelCowboyBoots']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='apparelGothBoots']/effectgroup/passive_effect[@name='PhysicalDamageResist']/@value">2.5,5</set>
+	<setattribute xpath="/items/item[@name='apparelGothBoots']/effectgroup/passive_effect[@name='PhysicalDamageResist']" name="tier">1,6</set>
+
+	<set xpath="/items/item[@name='drugFortBites']/effectgroup/display_value[@name='dPhysicalDamageResist']/@value">25</set>
+</config>
