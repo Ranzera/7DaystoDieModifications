@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+	<ModInfo>
+		<Name value="Zombie Rebalance" />
+		<Description value="Rebalances Zombies. Should be used with its companion mod Armor Rebalance." />
+		<Author value="Ranzera" />
+		<Version value="1.0" />
+
+	</ModInfo>
+</xml>

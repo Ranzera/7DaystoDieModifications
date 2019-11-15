@@ -1,0 +1,63 @@
+<config>
+	<insertBefore xpath="/entity_classes/entity_class[@name='zombieWightFeral']">
+		<entity_class name="zombieWight" extends="zombieTemplateMale">
+			<property name="Tags" value="entity,zombie,walker"/>
+			<property name="Mesh" value="Zombies/zombieStandardFeralRagdoll"/>
+			<property name="SoundRandom" value="Enemies/Feral_Zombie/zombieferalroam"/>
+			<property name="SoundAlert" value="Enemies/Feral_Zombie/zombieferalalert"/>
+			<property name="SoundAttack" value="Enemies/Feral_Zombie/zombieferalattack"/>
+			<property name="SoundHurt" value="Enemies/Feral_Zombie/zombieferalpain"/>
+			<property name="SoundDeath" value="Enemies/Feral_Zombie/zombieferaldeath"/>
+			<property name="SoundSense" value="Enemies/Feral_Zombie/zombieferalsense"/>
+			<property name="SoundFootstepModifier" value="Enemies/Feral_Zombie/zombieferalfootstep"/>
+			<property name="WalkType" value="2"/>
+			<property name="Mass" value="210"/>
+			
+			<property name="DismemberMultiplierHead" value=".85"/><property name="DismemberMultiplierArms" value=".85"/><property name="DismemberMultiplierLegs" value=".85"/>
+			<property name="PainResistPerHit" value=".15"/>
+			
+			<property name="MoveSpeedAggro" value="0.2, 1.25"/>
+			<property name="JumpMaxDistance" value="3.6, 4"/>
+
+			<property name="ExperienceGain" value="750"/> <!-- XP strong -->
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="315"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="30"/>
+			</effect_group>
+		</entity_class>
+	</insertBefore>
+	
+	<setattribute xpath="/entity_classes/entity_class[@name='zombieWightFeral']" name="extends">zombieWight</setattribute>
+	<set xpath="/entity_classes/entity_class[@name='zombieWightFeral']/property[@name='Tags']/@value">entity,zombie,walker,feral</set>
+	<remove xpath="/entity_classes/entity_class[@name='zombieWightFeral']/property[@name='Mesh']" />
+	<remove xpath="/entity_classes/entity_class[@name='zombieWightFeral']/property[@name='SoundRandom']" />
+	<remove xpath="/entity_classes/entity_class[@name='zombieWightFeral']/property[@name='SoundAlert']" />
+	<remove xpath="/entity_classes/entity_class[@name='zombieWightFeral']/property[@name='SoundAttack']" />
+	<remove xpath="/entity_classes/entity_class[@name='zombieWightFeral']/property[@name='SoundHurt']" />
+	<remove xpath="/entity_classes/entity_class[@name='zombieWightFeral']/property[@name='SoundDeath']" />
+	<remove xpath="/entity_classes/entity_class[@name='zombieWightFeral']/property[@name='SoundSense']" />
+	<remove xpath="/entity_classes/entity_class[@name='zombieWightFeral']/property[@name='SoundFootstepModifier']" />
+	<remove xpath="/entity_classes/entity_class[@name='zombieWightFeral']/property[@name='WalkType']" />
+	<remove xpath="/entity_classes/entity_class[@name='zombieWightFeral']/property[@name='Mass']" />
+	
+	<append xpath="/entity_classes/entity_class[@name='zombieLab']">
+		<property name="HandItem" value="meleeHandZombieStripper" />
+	</append>
+	<setattribute xpath="/entity_classes/entity_class[@name='zombieLabFeral']/property[@name='HandItem']" name="value">meleeHandZombieStripperFeral</setattribute>
+	
+	<setattribute xpath="/entity_classes/entity_class[@name='zombieNurse']/property[@name='HandItem']" name="value">meleeHandZombieStripper</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='zombieNurseFeral']/property[@name='HandItem']" name="value">meleeHandZombieStripperFeral</setattribute>
+	
+	<set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Tags']/@Explosion.RadiusBlocks">3</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Tags']/@Explosion.RadiusEntities">3</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Tags']/@Explosion.BlockDamage">1000</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Tags']/@Explosion.EntityDamage">100</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Tags']/@Explosion.DamageBonus.earth">0</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Tags']/@ExplodeDelay">1.5</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieDemolition']/property[@name='Tags']/@ExplodeHealthThreshold">100</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieDemolition']/effect_group[@name='Base_Effects']/passive_effect[@name='HealthMax']/@value">300</set>
+</config>
