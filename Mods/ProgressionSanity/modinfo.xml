@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+	<ModInfo>
+		<Name value="Progression Sanity" />
+		<Description value="Massively Scales back the absurd EXP requirements. Still unreasonable, yet now achievable." />
+		<Author value="Ranzera" />
+		<Version value="1.0" />
+
+	</ModInfo>
+</xml>
