@@ -1,0 +1,6 @@
+<config>
+	<set xpath="/entitygroups/entitygroup[@name='ZombiesAll']/entity[@name='zombieStripper']/@name">zombieLab</set>
+	
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'ZombieBikerBarGroup')]/entity[@name='zombieStripper']/@name">zombieNurse</set>
+	<set xpath="/entitygroups/entitygroup[contains(@name, 'ZombieBikerBarGroup')]/entity[@name='zombieStripperFeral']/@name">zombieNurseFeral</set>
+</config>

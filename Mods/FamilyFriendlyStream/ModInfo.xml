@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xml>
+	<ModInfo>
+		<Name value="Family Friendly Stream" />
+		<Description value="Removes Stripper Zombies from the spawner configs." />
+		<Author value="Ranzera" />
+		<Version value="1.0" />
+
+	</ModInfo>
+</xml>
