@@ -1,55 +1,115 @@
 <config>
-	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='DamageEntity']/@value">8</set>
+	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='DamageEntity']/@value">9</set>
 	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='DamageBlock']/@value">40</set>
 	
-	<set xpath="/items/item[@name='meleeHandZombie01']/property[@class='Action0']/property[@name='DamageEntity']/@value">8</set>
+	<set xpath="/items/item[@name='meleeHandZombie01']/property[@class='Action0']/property[@name='DamageEntity']/@value">9</set>
 	<set xpath="/items/item[@name='meleeHandZombie01']/property[@class='Action0']/property[@name='DamageBlock']/@value">40</set>
 	
-	<set xpath="/items/item[@name='meleeHandZombieFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">16</set>
+	<insertAfter xpath="/entity_classes/entity_class[@name='meleeHandZombie01']">
+		<item name="meleeHandZombie01Female">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="7"/>
+				<property name="DamageBlock" value="36"/>
+				<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,buffInjuryStunned01"/>
+			</property>
+			<effect_group name="meleeHandZombie01" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="buffInjuryBleedingZombie"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="buffInfectionCatch"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryStunned01"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="infectionZombieHit" operation="set" value="30"/><!--InfectionRegular-->
+			</effect_group>
+		</item>
+	</insertAfter>
+	
+	<set xpath="/items/item[@name='meleeHandZombieFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">18</set>
 	<set xpath="/items/item[@name='meleeHandZombieFeral']/property[@class='Action0']/property[@name='DamageBlock']/@value">70</set>
+	<set xpath="/items/item[@name='meleeHandZombieFeral']/effect_group/passive_effect[@tags='buffInjuryBleedingZombie']/@value">.15</set>
+	<set xpath="/items/item[@name='meleeHandZombieFeral']/effect_group/passive_effect[@tags='buffInfectionCatch']/@value">.20</set>
+	<set xpath="/items/item[@name='meleeHandZombieFeral']/effect_group/passive_effect[@tags='buffInjuryStunned01']/@value">.40</set>
+	
+	<insertAfter xpath="/entity_classes/entity_class[@name='meleeHandZombieFeral']">
+		<item name="meleeHandZombieFemaleFeral">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="14"/>
+				<property name="DamageBlock" value="62"/>
+				<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,buffInjuryStunned01"/>
+			</property>
+			<effect_group name="meleeHandZombie01" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".40" tags="buffInjuryBleedingZombie"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="buffInfectionCatch"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".15" tags="buffInjuryStunned01"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="infectionZombieHit" operation="set" value="30"/><!--InfectionRegular-->
+			</effect_group>
+		</item>
+	</insertAfter>
 	
 	<!-- crawler. This hand item is automatically used (hardcoded) if a zombie turns into a crawler. Can be overridden in entityclasses. See zombieBurnt. -->
-	<!-- <set xpath="/items/item[@name='meleeHandZombie02']/property[@class='Action0']/property[@name='DamageEntity']/@value">8</set> This doesn't normally exist, is extended -->
+	<!-- <set xpath="/items/item[@name='meleeHandZombie02']/property[@class='Action0']/property[@name='DamageEntity']/@value">9</set> This doesn't normally exist, is extended -->
 	<!-- <set xpath="/items/item[@name='meleeHandZombie02']/property[@class='Action0']/property[@name='DamageBlock']/@value">40</set> This doesn't normally exist, is extended -->
 	
 	<!-- crawler. This hand item is automatically used (hardcoded) if a feral zombie turns into a crawler. Can be overridden in entityclasses. See zombieBurnt. -->
-	<!-- <set xpath="/items/item[@name='meleeHandZombie02Feral']/property[@class='Action0']/property[@name='DamageEntity']/@value">8</set> This doesn't normally exist, is extended -->
+	<!-- <set xpath="/items/item[@name='meleeHandZombie02Feral']/property[@class='Action0']/property[@name='DamageEntity']/@value">9</set> This doesn't normally exist, is extended -->
 	<!-- <set xpath="/items/item[@name='meleeHandZombie02Feral']/property[@class='Action0']/property[@name='DamageBlock']/@value">40</set> This doesn't normally exist, is extended -->
 	
-	<set xpath="/items/item[@name='meleeHandZombieBurning']/property[@class='Action0']/property[@name='DamageEntity']/@value">9</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurning']/property[@class='Action0']/property[@name='DamageEntity']/@value">8</set>
 	<set xpath="/items/item[@name='meleeHandZombieBurning']/property[@class='Action0']/property[@name='DamageBlock']/@value">30</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurning']/effect_group/passive_effect[@tags='buffBurningZombie']/@value">.25</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurning']/effect_group/passive_effect[@tags='buffInfectionCatch']/@value">.05</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurning']/effect_group/passive_effect[@tags='buffInjuryStunned01']/@value">.1</set>
 	
-	<set xpath="/items/item[@name='meleeHandZombieBurningFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">19</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurningFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">16</set>
 	<set xpath="/items/item[@name='meleeHandZombieBurningFeral']/property[@class='Action0']/property[@name='DamageBlock']/@value">45</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurningFeral']/effect_group/passive_effect[@tags='buffBurningZombie']/@value">.5</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurningFeral']/effect_group/passive_effect[@tags='buffInfectionCatch']/@value">.05</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurningFeral']/effect_group/passive_effect[@tags='buffInjuryStunned01']/@value">.2</set>
 	
 	<!-- crawler. This hand item is automatically used (hardcoded) if a burning zombie turns into a crawler. Can be overridden in entityclasses. See zombieBurnt. -->
-	<set xpath="/items/item[@name='meleeHandZombieBurningCrawler']/property[@class='Action0']/property[@name='DamageEntity']/@value">19</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurningCrawler']/property[@class='Action0']/property[@name='DamageEntity']/@value">16</set>
 	<set xpath="/items/item[@name='meleeHandZombieBurningCrawler']/property[@class='Action0']/property[@name='DamageBlock']/@value">30</set>
 	
-	<set xpath="/items/item[@name='meleeHandZombieCop']/property[@class='Action0']/property[@name='DamageEntity']/@value">16</set>
+	<set xpath="/items/item[@name='meleeHandZombieCop']/property[@class='Action0']/property[@name='DamageEntity']/@value">18</set>
 	<set xpath="/items/item[@name='meleeHandZombieCop']/property[@class='Action0']/property[@name='DamageBlock']/@value">140</set>
+	<set xpath="/items/item[@name='meleeHandZombieCop']/effect_group/passive_effect[@tags='buffInjuryBleedingZombie']/@value">.10</set>
+	<set xpath="/items/item[@name='meleeHandZombieCop']/effect_group/passive_effect[@tags='buffInfectionCatch']/@value">.20</set>
+	<set xpath="/items/item[@name='meleeHandZombieCop']/effect_group/passive_effect[@tags='buffInjuryStunned01']/@value">.35</set>
 	
-	<set xpath="/items/item[@name='ammoProjectileZombieVomit']/property[@class='Action1']/property[@name='DamageEntity']/@value">16</set>
+	<set xpath="/items/item[@name='ammoProjectileZombieVomit']/property[@class='Action1']/property[@name='DamageEntity']/@value">15</set>
 	<set xpath="/items/item[@name='ammoProjectileZombieVomit']/property[@class='Action1']/property[@name='DamageBlock']/@value">160</set>
 	<set xpath="/items/item[@name='ammoProjectileZombieVomit']/property[@class='Action1']/property[@name='Velocity']/@value">18</set>
 	<set xpath="/items/item[@name='ammoProjectileZombieVomit']/property[@class='Action1']/property[@name='FlyTime']/@value">2</set>
 	<set xpath="/items/item[@name='ammoProjectileZombieVomit']/property[@class='Action1']/property[@name='LifeTime']/@value">4</set>
 	<set xpath="/items/item[@name='ammoProjectileZombieVomit']/property[@class='Action1']/property[@name='CollisionRadius']/@value">.5</set>
+	<append xpath="/items/item[@name='meleeHandZombieStripper']/property[@class='Action0']" />
+		<property name="Explosion.RadiusBlocks" value="2"/>
+		<property name="Explosion.RadiusEntities" value="1"/>
+	</append>
 	
-	<set xpath="/items/item[@name='meleeHandZombieCopFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">30</set>
+	<set xpath="/items/item[@name='meleeHandZombieCopFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">32</set>
 	<set xpath="/items/item[@name='meleeHandZombieCopFeral']/property[@class='Action0']/property[@name='DamageBlock']/@value">300</set>
+	<set xpath="/items/item[@name='meleeHandZombieCopFeral']/effect_group/passive_effect[@tags='buffInjuryBleedingZombie']/@value">.20</set>
+	<set xpath="/items/item[@name='meleeHandZombieCopFeral']/effect_group/passive_effect[@tags='buffInfectionCatch']/@value">.25</set>
+	<set xpath="/items/item[@name='meleeHandZombieCopFeral']/effect_group/passive_effect[@tags='buffInjuryStunned01']/@value">.5</set>
 	
-	<set xpath="/items/item[@name='ammoProjectileZombieVomitFeral']/property[@class='Action1']/property[@name='DamageEntity']/@value">16</set>
+	<set xpath="/items/item[@name='ammoProjectileZombieVomitFeral']/property[@class='Action1']/property[@name='DamageEntity']/@value">18</set>
 	<set xpath="/items/item[@name='ammoProjectileZombieVomitFeral']/property[@class='Action1']/property[@name='DamageBlock']/@value">160</set>
 	<set xpath="/items/item[@name='ammoProjectileZombieVomitFeral']/property[@class='Action1']/property[@name='Velocity']/@value">18</set>
 	<set xpath="/items/item[@name='ammoProjectileZombieVomitFeral']/property[@class='Action1']/property[@name='FlyTime']/@value">2</set>
 	<set xpath="/items/item[@name='ammoProjectileZombieVomitFeral']/property[@class='Action1']/property[@name='LifeTime']/@value">4</set>
 	<!-- <set xpath="/items/item[@name='ammoProjectileZombieVomitFeral']/property[@class='Action1']/property[@name='CollisionRadius']/@value">.5</set> This doesn't normally exist, is extended -->
-	<set xpath="/items/item[@name='ammoProjectileZombieVomitFeral']/property[@class='Action1']/property[@name='Explosion.RadiusBlocks']/@value">2</set>
-	<set xpath="/items/item[@name='ammoProjectileZombieVomitFeral']/property[@class='Action1']/property[@name='Explosion.RadiusEntities']/@value">1</set>
+	<set xpath="/items/item[@name='ammoProjectileZombieVomitFeral']/property[@class='Action1']/property[@name='Explosion.RadiusBlocks']/@value">3</set>
+	<set xpath="/items/item[@name='ammoProjectileZombieVomitFeral']/property[@class='Action1']/property[@name='Explosion.RadiusEntities']/@value">2</set>
 	
-	<!-- <set xpath="/items/item[@name='meleeHandZombieCopRadiated']/property[@class='Action0']/property[@name='DamageEntity']/@value">30</set> This doesn't normally exist, is extended -->
+	<!-- <set xpath="/items/item[@name='meleeHandZombieCopRadiated']/property[@class='Action0']/property[@name='DamageEntity']/@value">32</set> This doesn't normally exist, is extended -->
 	<!-- <set xpath="/items/item[@name='meleeHandZombieCopRadiated']/property[@class='Action0']/property[@name='DamageBlock']/@value">300</set> This doesn't normally exist, is extended -->
+	<set xpath="/items/item[@name='meleeHandZombieCopRadiated']/effect_group/passive_effect[@tags='buffInjuryBleedingZombie']/@value">.20</set>
+	<set xpath="/items/item[@name='meleeHandZombieCopRadiated']/effect_group/passive_effect[@tags='buffInfectionCatch']/@value">.25</set>
+	<set xpath="/items/item[@name='meleeHandZombieCopRadiated']/effect_group/passive_effect[@tags='buffInjuryStunned01']/@value">.5</set>
 	
 	<set xpath="/items/item[@name='ammoProjectileZombieVomitRadiated']/property[@class='Action1']/property[@name='DamageEntity']/@value">20</set>
 	<set xpath="/items/item[@name='ammoProjectileZombieVomitRadiated']/property[@class='Action1']/property[@name='DamageBlock']/@value">360</set>
@@ -57,59 +117,151 @@
 	<set xpath="/items/item[@name='ammoProjectileZombieVomitRadiated']/property[@class='Action1']/property[@name='FlyTime']/@value">2</set>
 	<set xpath="/items/item[@name='ammoProjectileZombieVomitRadiated']/property[@class='Action1']/property[@name='LifeTime']/@value">4</set>
 	<!-- <set xpath="/items/item[@name='ammoProjectileZombieVomitRadiated']/property[@class='Action1']/property[@name='CollisionRadius']/@value">.5</set> This doesn't normally exist, is extended -->
-	<set xpath="/items/item[@name='ammoProjectileZombieVomitRadiated']/property[@class='Action1']/property[@name='Explosion.RadiusBlocks']/@value">2</set>
-	<set xpath="/items/item[@name='ammoProjectileZombieVomitRadiated']/property[@class='Action1']/property[@name='Explosion.RadiusEntities']/@value">1</set>
+	<set xpath="/items/item[@name='ammoProjectileZombieVomitRadiated']/property[@class='Action1']/property[@name='Explosion.RadiusBlocks']/@value">4</set>
+	<set xpath="/items/item[@name='ammoProjectileZombieVomitRadiated']/property[@class='Action1']/property[@name='Explosion.RadiusEntities']/@value">2</set>
 	
-	<set xpath="/items/item[@name='meleeHandAnimalZombieDog']/property[@class='Action0']/property[@name='DamageEntity']/@value">8</set>
+	<set xpath="/items/item[@name='meleeHandAnimalZombieDog']/property[@class='Action0']/property[@name='DamageEntity']/@value">10</set>
 	<set xpath="/items/item[@name='meleeHandAnimalZombieDog']/property[@class='Action0']/property[@name='DamageBlock']/@value">10</set>
 	
 	<set xpath="/items/item[@name='meleeHandZombieStrong']/property[@class='Action0']/property[@name='DamageEntity']/@value">16</set>
 	<set xpath="/items/item[@name='meleeHandZombieStrong']/property[@class='Action0']/property[@name='DamageBlock']/@value">95</set>
+	<set xpath="/items/item[@name='meleeHandZombieStrong']/effect_group/passive_effect[@tags='buffInjuryBleedingZombie']/@value">.05</set>
+	<set xpath="/items/item[@name='meleeHandZombieStrong']/effect_group/passive_effect[@tags='buffInfectionCatch']/@value">.10</set>
+	<set xpath="/items/item[@name='meleeHandZombieStrong']/effect_group/passive_effect[@tags='buffInjuryStunned01']/@value">.35</set>
 	
-	<set xpath="/items/item[@name='meleeHandZombieDemolition']/property[@class='Action0']/property[@name='DamageEntity']/@value">16</set>
-	<set xpath="/items/item[@name='meleeHandZombieDemolition']/property[@class='Action0']/property[@name='DamageBlock']/@value">300</set>
+	<insertAfter xpath="/entity_classes/entity_class[@name='meleeHandZombieStrong']">
+		<item name="meleeHandZombieStrongFemale">
+			<property name="Extends" value="meleeHandZombieStrong"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="13"/>
+				<property name="DamageBlock" value="85"/>
+				<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,buffInjuryStunned01"/>
+			</property>
+			<effect_group name="meleeHandZombie01" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="buffInjuryBleedingZombie"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="buffInfectionCatch"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".15" tags="buffInjuryStunned01"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="infectionZombieHit" operation="set" value="30"/><!--InfectionRegular-->
+			</effect_group>
+		</item>
+	</insertAfter>
 	
-	<set xpath="/items/item[@name='meleeHandZombieStrongFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">30</set>
+	<set xpath="/items/item[@name='meleeHandZombieDemolition']/property[@class='Action0']/property[@name='DamageEntity']/@value">18</set>
+	<set xpath="/items/item[@name='meleeHandZombieDemolition']/property[@class='Action0']/property[@name='DamageBlock']/@value">240</set>
+	
+	<insertAfter xpath="/entity_classes/entity_class[@name='meleeHandZombieDemolition']">
+		<item name="meleeHandZombieDemolitionFeral">
+			<property name="Extends" value="meleeHandZombieDemolition"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="32"/>
+				<property name="DamageBlock" value="360"/>
+				<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,buffInjuryStunned01"/>
+			</property>
+			<effect_group name="meleeHandZombieStrong" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".75" tags="buffInjuryStunned01"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="buffInjuryBleedingZombie"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="buffInfectionCatch"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".30" tags="buffInjuryStunned01"/>
+			</effect_group>
+		</item>
+	</insertAfter>
+	
+	<set xpath="/items/item[@name='meleeHandZombieStrongFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">32</set>
 	<set xpath="/items/item[@name='meleeHandZombieStrongFeral']/property[@class='Action0']/property[@name='DamageBlock']/@value">190</set>
 	
-	<set xpath="/items/item[@name='meleeHandAnimalBear']/property[@class='Action0']/property[@name='DamageEntity']/@value">22</set>
+	<insertAfter xpath="/entity_classes/entity_class[@name='meleeHandZombieStrongFeral']">
+		<item name="meleeHandZombieStrongFemale">
+			<property name="Extends" value="meleeHandZombieStrong"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="26"/>
+				<property name="DamageBlock" value="120"/>
+			</property>
+			<effect_group name="meleeHandZombieStrongFeral" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+				<passive_effect name="BuffProcChance" operation="base_set" value=".40" tags="buffInjuryBleedingZombie"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="buffInfectionCatch"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="buffInjuryStunned01"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="infectionZombieHit" operation="set" value="45"/><!--InfectionFeral-->
+			</effect_group>
+		</item>
+	</insertAfter>
+	
+	<set xpath="/items/item[@name='meleeHandAnimalBear']/property[@class='Action0']/property[@name='DamageEntity']/@value">24</set>
 	<set xpath="/items/item[@name='meleeHandAnimalBear']/property[@class='Action0']/property[@name='DamageBlock']/@value">30</set>
 	
-	<set xpath="/items/item[@name='meleeHandAnimalZombieBear']/property[@class='Action0']/property[@name='DamageEntity']/@value">38</set>
+	<set xpath="/items/item[@name='meleeHandAnimalZombieBear']/property[@class='Action0']/property[@name='DamageEntity']/@value">40</set>
 	<set xpath="/items/item[@name='meleeHandAnimalZombieBear']/property[@class='Action0']/property[@name='DamageBlock']/@value">50</set>
 	
-	<set xpath="/items/item[@name='meleeHandAnimalZombieBearFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">55</set>
+	<set xpath="/items/item[@name='meleeHandAnimalZombieBearFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">60</set>
 	<set xpath="/items/item[@name='meleeHandAnimalZombieBearFeral']/property[@class='Action0']/property[@name='DamageBlock']/@value">80</set>
 	
-	<!-- <set xpath="/items/item[@name='meleeHandZombieHazMat']/property[@class='Action0']/property[@name='DamageEntity']/@value">8</set> This doesn't normally exist, is extended -->
+	<!-- <set xpath="/items/item[@name='meleeHandZombieHazMat']/property[@class='Action0']/property[@name='DamageEntity']/@value">9</set> This doesn't normally exist, is extended -->
 	<!-- <set xpath="/items/item[@name='meleeHandZombieHazMat']/property[@class='Action0']/property[@name='DamageBlock']/@value">40</set> This doesn't normally exist, is extended -->
+	<set xpath="/items/item[@name='meleeHandZombieHazMat']/effect_group/passive_effect[@tags='buffInjuryBleedingZombie']/@value">.05</set>
+	<set xpath="/items/item[@name='meleeHandZombieHazMat']/effect_group/passive_effect[@tags='buffInfectionCatch']/@value">1</set>
+	<set xpath="/items/item[@name='meleeHandZombieHazMat']/effect_group/passive_effect[@tags='buffInjuryStunned01']/@value">.25</set>
 	
-	<!-- <set xpath="/items/item[@name='meleeHandZombieWorker']/property[@class='Action0']/property[@name='DamageEntity']/@value">8</set> This doesn't normally exist, is extended -->
+	<!-- <set xpath="/items/item[@name='meleeHandZombieHazMatFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">9</set> This doesn't normally exist, is extended -->
+	<!-- <set xpath="/items/item[@name='meleeHandZombieHazMatFeral']/property[@class='Action0']/property[@name='DamageBlock']/@value">40</set> This doesn't normally exist, is extended -->
+	<set xpath="/items/item[@name='meleeHandZombieHazMatFeral']/effect_group/passive_effect[@tags='buffInjuryBleedingZombie']/@value">.1</set>
+	<set xpath="/items/item[@name='meleeHandZombieHazMatFeral']/effect_group/passive_effect[@tags='buffInfectionCatch']/@value">1</set>
+	<set xpath="/items/item[@name='meleeHandZombieHazMatFeral']/effect_group/passive_effect[@tags='buffInjuryStunned01']/@value">.4</set>
+	
+	<!-- <set xpath="/items/item[@name='meleeHandZombieWorker']/property[@class='Action0']/property[@name='DamageEntity']/@value">9</set> This doesn't normally exist, is extended -->
 	<set xpath="/items/item[@name='meleeHandZombieWorker']/property[@class='Action0']/property[@name='DamageBlock']/@value">120</set>
+	<set xpath="/items/item[@name='meleeHandZombieWorker']/effect_group/passive_effect[@tags='buffInjuryBleedingZombie']/@value">.1</set>
+	<set xpath="/items/item[@name='meleeHandZombieWorker']/effect_group/passive_effect[@tags='buffInfectionCatch']/@value">.1</set>
+	<set xpath="/items/item[@name='meleeHandZombieWorker']/effect_group/passive_effect[@tags='buffInjuryStunned01']/@value">.3</set>
 	
-	<set xpath="/items/item[@name='meleeHandZombieWorkerFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">16</set>
+	<set xpath="/items/item[@name='meleeHandZombieWorkerFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">18</set>
 	<set xpath="/items/item[@name='meleeHandZombieWorkerFeral']/property[@class='Action0']/property[@name='DamageBlock']/@value">240</set>
+	<set xpath="/items/item[@name='meleeHandZombieWorkerFeral']/effect_group/passive_effect[@tags='buffInjuryBleedingZombie']/@value">.15</set>
+	<set xpath="/items/item[@name='meleeHandZombieWorkerFeral']/effect_group/passive_effect[@tags='buffInfectionCatch']/@value">.2</set>
+	<set xpath="/items/item[@name='meleeHandZombieWorkerFeral']/effect_group/passive_effect[@tags='buffInjuryStunned01']/@value">.45</set>
 	
-	<!-- <set xpath="/items/item[@name='meleeHandZombieFootballPlayer']/property[@class='Action0']/property[@name='DamageEntity']/@value">8</set> This doesn't normally exist, is extended -->
+	<!-- <set xpath="/items/item[@name='meleeHandZombieFootballPlayer']/property[@class='Action0']/property[@name='DamageEntity']/@value">9</set> This doesn't normally exist, is extended -->
 	<!-- <set xpath="/items/item[@name='meleeHandZombieFootballPlayer']/property[@class='Action0']/property[@name='DamageBlock']/@value">40</set> This doesn't normally exist, is extended -->
+	<set xpath="/items/item[@name='meleeHandZombieFootballPlayer']/effect_group/passive_effect[@tags='buffInjuryBleedingZombie']/@value">.10</set>
+	<set xpath="/items/item[@name='meleeHandZombieFootballPlayer']/effect_group/passive_effect[@tags='buffInfectionCatch']/@value">.05</set>
+	<set xpath="/items/item[@name='meleeHandZombieFootballPlayer']/effect_group/passive_effect[@tags='buffInjuryStunned01']/@value">.60</set>
 	
-	<set xpath="/items/item[@name='meleeHandZombieFootballPlayerFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">16</set>
+	<set xpath="/items/item[@name='meleeHandZombieFootballPlayerFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">18</set>
 	<set xpath="/items/item[@name='meleeHandZombieFootballPlayerFeral']/property[@class='Action0']/property[@name='DamageBlock']/@value">32</set>
+	<set xpath="/items/item[@name='meleeHandZombieFootballPlayerFeral']/effect_group/passive_effect[@tags='buffInjuryBleedingZombie']/@value">.2</set>
+	<set xpath="/items/item[@name='meleeHandZombieFootballPlayerFeral']/effect_group/passive_effect[@tags='buffInfectionCatch']/@value">.05</set>
+	<set xpath="/items/item[@name='meleeHandZombieFootballPlayerFeral']/effect_group/passive_effect[@tags='buffInjuryStunned01']/@value">.75</set>
 	
+	<set xpath="/items/item[@name='meleeHandZombieStripper']/property[@name='Extends']/@value">meleeHandZombie01Female</set>
 	<set xpath="/items/item[@name='meleeHandZombieStripper']/property[@class='Action0']/property[@name='DamageEntity']/@value">6</set>
-	!<!-- <set xpath="/items/item[@name='meleeHandZombieStripper']/property[@class='Action0']/property[@name='DamageBlock']/@value">16</set> This doesn't normally exist, is extended -->
+	<append xpath="/items/item[@name='meleeHandZombieStripper']/property[@class='Action0']" />
+		<property name="DamageBlock" value="24"/>
+	</append>
+	<set xpath="/items/item[@name='meleeHandZombieStripper']/effect_group/passive_effect[@tags='buffInjuryBleedingZombie']/@value">.25</set>
+	<set xpath="/items/item[@name='meleeHandZombieStripper']/effect_group/passive_effect[@tags='buffInfectionCatch']/@value">.4</set>
+	<set xpath="/items/item[@name='meleeHandZombieStripper']/effect_group/passive_effect[@tags='buffInjuryStunned01']/@value">.05</set>
 	
 	<set xpath="/items/item[@name='meleeHandZombieStripperFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">12</set>
 	<set xpath="/items/item[@name='meleeHandZombieStripperFeral']/property[@class='Action0']/property[@name='DamageBlock']/@value">30</set>
+	<set xpath="/items/item[@name='meleeHandZombieStripperFeral']/effect_group/passive_effect[@tags='buffInjuryBleedingZombie']/@value">.4</set>
+	<set xpath="/items/item[@name='meleeHandZombieStripperFeral']/effect_group/passive_effect[@tags='buffInfectionCatch']/@value">.6</set>
+	<set xpath="/items/item[@name='meleeHandZombieStripperFeral']/effect_group/passive_effect[@tags='buffInjuryStunned01']/@value">.1</set>
 	
-	<set xpath="/items/item[@name='meleeHandZombieBehemoth']/property[@class='Action0']/property[@name='DamageEntity']/@value">35</set>
-	<set xpath="/items/item[@name='meleeHandZombieBehemoth']/property[@class='Action0']/property[@name='DamageBlock']/@value">300</set>
+	<set xpath="/items/item[@name='meleeHandZombieBehemoth']/property[@class='Action0']/property[@name='DamageEntity']/@value">36</set>
+	<set xpath="/items/item[@name='meleeHandZombieBehemoth']/property[@class='Action0']/property[@name='DamageBlock']/@value">360</set>
+	<set xpath="/items/item[@name='meleeHandZombieBehemoth']/effect_group/passive_effect[@tags='buffInjuryBleedingZombie']/@value">.4</set>
+	<set xpath="/items/item[@name='meleeHandZombieBehemoth']/effect_group/passive_effect[@tags='buffInfectionCatch']/@value">.3</set>
+	<set xpath="/items/item[@name='meleeHandZombieBehemoth']/effect_group/passive_effect[@tags='buffInjuryStunned01']/@value">.7</set>
 	
-	<set xpath="/items/item[@name='meleeHandAnimalCoyote']/property[@class='Action0']/property[@name='DamageEntity']/@value">8</set>
-	<set xpath="/items/item[@name='meleeHandAnimalCoyote']/property[@class='Action0']/property[@name='DamageBlock']/@value">10</set>
+	<set xpath="/items/item[@name='meleeHandAnimalCoyote']/property[@class='Action0']/property[@name='DamageEntity']/@value">9</set>
+	<set xpath="/items/item[@name='meleeHandAnimalCoyote']/property[@class='Action0']/property[@name='DamageBlock']/@value">6</set>
 	
-	<set xpath="/items/item[@name='meleeHandAnimalZombieVulture']/property[@class='Action0']/property[@name='DamageEntity']/@value">7</set>
-	<set xpath="/items/item[@name='meleeHandAnimalZombieVulture']/property[@class='Action0']/property[@name='DamageBlock']/@value">5</set>
+	<set xpath="/items/item[@name='meleeHandAnimalZombieVulture']/property[@class='Action0']/property[@name='DamageEntity']/@value">6</set>
+	<set xpath="/items/item[@name='meleeHandAnimalZombieVulture']/property[@class='Action0']/property[@name='DamageBlock']/@value">1</set>
 	
 	<set xpath="/items/item[@name='ammoProjectileVultureVomit']/property[@class='Action1']/property[@name='DamageEntity']/@value">12</set>
 	<set xpath="/items/item[@name='ammoProjectileVultureVomit']/property[@class='Action1']/property[@name='DamageBlock']/@value">80</set>
@@ -118,15 +270,15 @@
 	<set xpath="/items/item[@name='ammoProjectileVultureVomit']/property[@class='Action1']/property[@name='LifeTime']/@value">8</set>
 	<set xpath="/items/item[@name='ammoProjectileVultureVomit']/property[@class='Action1']/property[@name='CollisionRadius']/@value">.5</set>
 	
-	<set xpath="/items/item[@name='meleeHandAnimalSnake']/property[@class='Action0']/property[@name='DamageEntity']/@value">8</set>
+	<set xpath="/items/item[@name='meleeHandAnimalSnake']/property[@class='Action0']/property[@name='DamageEntity']/@value">6</set>
 	<set xpath="/items/item[@name='meleeHandAnimalSnake']/property[@class='Action0']/property[@name='DamageBlock']/@value">1</set>
 	
-	<set xpath="/items/item[@name='meleeHandAnimalWolf']/property[@class='Action0']/property[@name='DamageEntity']/@value">11</set>
-	<set xpath="/items/item[@name='meleeHandAnimalWolf']/property[@class='Action0']/property[@name='DamageBlock']/@value">10</set>
+	<set xpath="/items/item[@name='meleeHandAnimalWolf']/property[@class='Action0']/property[@name='DamageEntity']/@value">12</set>
+	<set xpath="/items/item[@name='meleeHandAnimalWolf']/property[@class='Action0']/property[@name='DamageBlock']/@value">8</set>
 	
-	<set xpath="/items/item[@name='meleeHandAnimalDireWolf']/property[@class='Action0']/property[@name='DamageEntity']/@value">17</set>
-	<set xpath="/items/item[@name='meleeHandAnimalDireWolf']/property[@class='Action0']/property[@name='DamageBlock']/@value">12</set>
+	<set xpath="/items/item[@name='meleeHandAnimalDireWolf']/property[@class='Action0']/property[@name='DamageEntity']/@value">18</set>
+	<set xpath="/items/item[@name='meleeHandAnimalDireWolf']/property[@class='Action0']/property[@name='DamageBlock']/@value">10</set>
 	
-	<set xpath="/items/item[@name='meleeHandBossGrace']/property[@class='Action0']/property[@name='DamageEntity']/@value">28</set>
+	<set xpath="/items/item[@name='meleeHandBossGrace']/property[@class='Action0']/property[@name='DamageEntity']/@value">30</set>
 	<set xpath="/items/item[@name='meleeHandBossGrace']/property[@class='Action0']/property[@name='DamageBlock']/@value">100</set>
 </config>
