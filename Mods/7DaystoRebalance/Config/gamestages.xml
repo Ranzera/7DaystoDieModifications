@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<config>
+	<set xpath="/gamestages/spawner[@name='BloodMoonHorde']/gamestage[@stage='1']/spawn[@group='feralHordeStageGS1']/@num">20</set>
+	<set xpath="/gamestages/spawner[@name='BloodMoonHorde']/gamestage[@stage='2']/spawn[@group='feralHordeStageGS2']/@num">20</set>
+	<set xpath="/gamestages/spawner[@name='BloodMoonHorde']/gamestage[@stage='4']/spawn[@group='feralHordeStageGS4']/@num">20</set>
+	<set xpath="/gamestages/spawner[@name='BloodMoonHorde']/gamestage[@stage='7']/spawn[@group='feralHordeStageGS7']/@num">20</set>
+</config>

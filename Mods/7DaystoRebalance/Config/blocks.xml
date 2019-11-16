@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configs>
+	<set xpath="/blocks/block[@name='trapSpikesWoodMaster']/property[@name='Damage']/@value">10</set>
+	<set xpath="/blocks/block[@name='trapSpikesWoodMaster']/property[@name='Damage_received']/@value">33</set> <!-- This is the default -->
+	<set xpath="/blocks/block[@name='trapSpikesWoodMaster']/property[@name='MaxDamage']/@value">33</set> <!-- This is the default -->
+	<set xpath="/blocks/block[@name='trapSpikesWoodDmg2']/property[@class='UpgradeBlock']/property[@name='UpgradeHitCount']/@value">20</set>
+	<set xpath="/blocks/block[@name='trapSpikesWoodDmg2']/property[@class='UpgradeBlock']/property[@name='ItemCount']/@value">10</set> <!-- This is the default -->
+	<set xpath="/blocks/block[@name='trapSpikesWoodDmg1']/property[@class='UpgradeBlock']/property[@name='UpgradeHitCount']/@value">10</set>
+	<set xpath="/blocks/block[@name='trapSpikesWoodDmg1']/property[@class='UpgradeBlock']/property[@name='ItemCount']/@value">5</set> <!-- This is the default -->
+	<set xpath="/blocks/block[@name='trapSpikesWoodDmg0']/property[@class='UpgradeBlock']/property[@name='UpgradeHitCount']/@value">20</set>
+	<set xpath="/blocks/block[@name='trapSpikesWoodDmg0']/property[@class='UpgradeBlock']/property[@name='ItemCount']/@value">4</set> <!-- This is the default -->
+	
+	<set xpath="/blocks/block[@name='trapSpikesScrapIronMaster']/property[@name='Damage']/@value">20</set>
+	<set xpath="/blocks/block[@name='trapSpikesScrapIronMaster']/property[@name='Damage_received']/@value">33</set> <!-- This is the default -->
+	<set xpath="/blocks/block[@name='trapSpikesScrapIronMaster']/property[@name='MaxDamage']/@value">132</set> <!-- This is the default -->
+	<set xpath="/blocks/block[@name='trapSpikesIronDmg2']/property[@class='UpgradeBlock']/property[@name='UpgradeHitCount']/@value">20</set>
+	<set xpath="/blocks/block[@name='trapSpikesIronDmg2']/property[@class='UpgradeBlock']/property[@name='ItemCount']/@value">1</set> <!-- This is the default -->
+	<set xpath="/blocks/block[@name='trapSpikesIronDmg1']/property[@class='UpgradeBlock']/property[@name='UpgradeHitCount']/@value">10</set>
+	<set xpath="/blocks/block[@name='trapSpikesIronDmg1']/property[@class='UpgradeBlock']/property[@name='ItemCount']/@value">1</set> <!-- This is the default -->
+	
+	<set xpath="/blocks/block[@name='woodLogSpike1']/property[@name='Damage']/@value">2</set>
+	<set xpath="/blocks/block[@name='woodLogSpike1']/property[@name='Damage_received']/@value">20</set>
+	
+	<set xpath="/blocks/block[@name='rWoodLogSpike2']/property[@name='Damage']/@value">2</set>
+	<set xpath="/blocks/block[@name='rWoodLogSpike2']/property[@name='Damage_received']/@value">20</set>
+	
+	<set xpath="/blocks/block[@name='rWoodMetalLogSpike3']/property[@name='Damage']/@value">3</set>
+	<set xpath="/blocks/block[@name='rWoodMetalLogSpike3']/property[@name='Damage_received']/@value">25</set>
+	
+	<set xpath="/blocks/block[@name='scrapIronLogSpike4']/property[@name='Damage']/@value">3</set>
+	<set xpath="/blocks/block[@name='scrapIronLogSpike4']/property[@name='Damage_received']/@value">25</set>
+	
+	<set xpath="/blocks/block[@name='rScrapIronLogSpike5']/property[@name='Damage']/@value">3</set>
+	<set xpath="/blocks/block[@name='rScrapIronLogSpike5']/property[@name='Damage_received']/@value">25</set>
+	
+	<set xpath="/blocks/block[@name='steelLogSpike6']/property[@name='Damage']/@value">4</set>
+	<set xpath="/blocks/block[@name='steelLogSpike6']/property[@name='Damage_received']/@value">50</set>
+	
+	<append xpath="/blocks/block[@name='terrStone']">
+		<drop event="Harvest" name="resourceIronFragment" count="2" tag="oreWoodHarvest"/>
+		<drop event="Fall" name="resourceIronFragment" count="4" prob="0.23" stick_chance="0"/>
+	</append>
+	
+	<remove xpath="/blocks/block[@name='terrOreIron']/drop[contains(@name, 'resourceScrapIron')]" />
+	
+	<append xpath="/blocks/block[@name='terrOreIron']">
+		<drop event="Harvest" name="resourceIronFragment" count="21" tag="oreWoodHarvest"/>
+		<drop event="Fall" name="resourceIronFragment" count="30" prob="0.4" stick_chance="0"/>
+	</append>
+	
+	<remove xpath="/blocks/block[@name='oreIronBoulder']/drop[@name='resourceScrapIron']" />
+	
+	<append xpath="/blocks/block[@name='oreIronBoulder']">
+		<drop event="Harvest" name="resourceIronFragment" count="21" tag="oreWoodHarvest"/>
+		<drop event="Harvest" name="resourceRockSmall" count="14" tag="oreWoodHarvest"/>
+	</append>
+	
+	<append xpath="/blocks/block[@name='rockResource']">
+		<drop event="Harvest" name="resourceIronFragment" count="3" tag="oreWoodHarvest"/>
+	</append>
+</configs>
