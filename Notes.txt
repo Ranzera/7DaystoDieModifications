@@ -1,0 +1,161 @@
+DA BIG STUFF
+
+TREASURE CASKETS
+
+Battlefield Refactor
+Battlefields have been reworked in DSP. It's been a multiyear process for them and we are now syncing our codebase up with theirs. This means there's a lot more working content from BCNMs
+Specifically confirmed new fights:
+
+Missions
+(Conquest)Windurst 9-2 IMPLEMENTED!
+
+BCNM
+An Awful Autopsy
+Amphibian Assault
+Birds of a Feather
+Brothers D'Aurphe
+Celery
+Crustacean Conundrum
+Die by the Sword
+Doll Factory
+Factory Rejects
+Fe'e
+Grove Guardians
+Idol Thoughts
+Jungle Boogymen
+Let Sleeping Dogs Die
+Prehistoric Pidgeons (worked before, now mobs 2 hour)
+Royal Succession
+The Worm's Turn
+Undying Promise
+
+ASS-ALTS
+Leujaoam Cleansing
+
+ENMs
+Brothers
+Century of Hardship
+Flames for the Dead
+Head Wind
+Like the Wind
+Race Runner
+
+TREASURE CASKETS
+
+SKY
+
+Brigadish Blade's immunities and removal of immunities implemented.
+Despot PANZERFAUST PANZERFAUST PANZERFAUST PANZERFAUST PANZERFAUST PANZERFAUST
+Detectors now spawn Steam Cleaner if eligible.
+Kirin now has proper Astral Flow logic and has both Regen and Regain.
+Faust now patrols the tunnels and ~~uses~~ spams Typhoon correctly.
+Mother Globe spawns Slave Globes on spawn
+Olia Grande spell list corrected. Now has Regain.
+Olia Media spell list corrected. Now has Regain.
+Olia Pequena spell list corrected. Now has Regain.
+Steam Cleaner spawn conditions corrected. Now drains TP on hit.
+Ullikummi Spell list corrected and now only uses Heavy Strike. Now has Regain.
+
+TREASURE CASKETS
+
+Conquest Areas and Missions
+Gate Guard logic refactored (now with 37% more shiney!)
+Windurst Mission logic reworked.
+Windurst 9-2 IMPLEMENTED!!!!
+
+TREASURE CASKETS
+
+Somebody call the COP!
+Prishe can now raise your noob ass like the perfect angel she is.
+
+
+TREASURE CASKETS
+
+Did someone call for a TOAU?
+Mission NPC logic refactor
+Assault NPC logic implemented
+
+TREASURE CASKETS
+
+U WOTG MATE?
+Campaign Guard logic refactored (read also: working)
+
+TREASURE CASKETS
+
+Weapon Skill Damage Calculation Refactor and Bug Fixes
+Fixed an issue where multihit weapon skills would fail to kill a mob because it stopped attacking too soon
+Fixed an issue where Ranged WS were affected by Mighty Strikes
+Hybrid Damage weapon skills can now crit
+Offhand weapon skill hits now properly use the offhand damage value
+Trick Attack now properly gives offhand hits 100% accuracy
+SATA now applies to FTP when it should instead of all the time
+
+
+JOB STUFF
+
+Dragoon
+Lightning Breath element has been corrected (It no longer burns when I breathe!)
+Breath enhancing gear now correctly increases breath damage
+Strafe has been implemented
+
+Ninja
+Items that enhance Mijin Gakure now properly do the thing.
+
+Notorious Monsters
+
+Implemented Frost Flambeau
+Implemented Mountain Worm
+
+Bune can now use Invincible.
+Hakutaku's spell list corrected
+King Vinegarroon spawn conditions corrected, regen fix and now has additional effect: Petrify.
+Lancelord Gaheel Ja's spell list corrected
+Slaugh spawn location corrected
+
+Dark Ixion level adjusted to 85 (from 88-90)
+Kegpaunch Doshgnosh level adjusted to 22 (from 25)
+Ra Dha Scarscute level adjusted to 83 (from 80-85)
+Sandworm level adjusted to 85 (from 88)
+Slaugh level adjusted to 77 (from 78)
+Va Gho Bloodbasked level adjusted to 83 (from 80-85)
+
+Various name syntax and family grouping properties updated.
+
+Quests
+Moongate pass quest has been implemented.
+Fixed True Will (NIN AF3) (Ranz note: Again?!?)
+
+
+Crafting
+Corrected a number of desynths not flagged as such.
+
+
+Drops
+Implemented drops for Firedance Magmaal Ja
+
+Various
+Lycopodium NPCs and teleports implemented
+Added more items based on retail captures
+Implemented Skulker's Cape effect
+Added some missing latents
+Added some missing pet effects from equipment
+
+Other Bug Fixes
+Empathy and Strafe now need merit points invested to appear in your traits list at 75.
+Fixed Shantotto's interaction in the Retribution WS Quest.
+Optic Fiber no longer crashes the server!
+Fixed Conquest RegionType enum casting when sent to SQL (this is what fucked us in May bois!)
+Trial by Lightning no longer shocks the server.
+Unarmed players can now use Hand to Hand weaponskills.
+The shape shifting Wespe has been outed.
+Varchet is no longer so easily tricked.
+Impale now Impales correctly.
+Light and Dark based sleeps now have their own resistances.
+Fission now looks like Fission instead of wtf-ever that was.
+Alliance Hate now works where applicable.
+Fixed a bug where a non-weapon could be used as a weapon.
+
+
+LEFTOVERS FOR US DEVS TO CHECK
+Archer/Hunter prelude has a comment about being AOE (shouldn't be)
+We probably need to manually re-add WS Alpha (the x*.85 penalty to WS damage)
